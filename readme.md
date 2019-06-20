@@ -4,17 +4,17 @@
 
 [TOC]
 
-1. 安装
+### 1. 安装
 
 首先您需要按照 [Laravel 5.4 官方文档](https://laravel.com/docs/5.4#installing-laravel) 的说明进行安装
 
 假设您的安装目录是 /home/http/laravel
 
-a. 将 `FineUIPHP` 的代码解压缩到您认为合适的任意目录，您可以将代码放到项目内，也可以放到项目外
+#### a. 将 `FineUIPHP` 的代码解压缩到您认为合适的任意目录，您可以将代码放到项目内，也可以放到项目外
 
 假设您的解压目录是 /home/fineui-lib
 
-b. 修改 `composer.json` 增加下面的配置信息
+#### b. 修改 `composer.json` 增加下面的配置信息
 
 ```json
     "repositories": [
@@ -25,14 +25,14 @@ b. 修改 `composer.json` 增加下面的配置信息
     ]
 ```
 
-c. 执行安装命令
+#### c. 执行安装命令
 ```bash
 composer require lvqingan/fineuiphp:dev-master
 ```
 
-2. 配置
+### 2. 配置
 
-2.1 初始化应用
+#### 2.1 初始化应用
 
 修改 `app/Providers/AppServiceProvider.php` 的 `boot()` 方法增加下面的代码
 
@@ -48,7 +48,7 @@ composer require lvqingan/fineuiphp:dev-master
     }
 ```
 
-2.2 增加事件响应
+#### 2.2 增加事件响应
 
 创建 `app/Listeners/RequestHandledListener.php`
 
@@ -89,7 +89,7 @@ class RequestHandledListener
     ];
 ```
 
-3. 静态资源入口文件
+### 3. 静态资源入口文件
 
 修改 `routes/web.php` 增加路由
 
@@ -101,7 +101,7 @@ Route::get('/res', function () {
 });
 ```
 
-4. 演示例子
+### 4. 演示例子
 
 修改 `routes/web.php` 的默认路由为
 ```php
